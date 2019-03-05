@@ -14,9 +14,11 @@ public class SelectControllerP2 : MonoBehaviour {
     public bool isActiveTankP2;
     public bool isActiveHealerP2;
     public TurnManager turn;
+    public HudManagerTest Text;
 
     void Start()
     {
+        Text = FindObjectOfType<HudManagerTest>();
         turn = FindObjectOfType<TurnManager>();
         tankP2 = FindObjectOfType<PositionTester2>();
         healerP2 = FindObjectOfType<PositionHealer2>();
@@ -42,6 +44,7 @@ public class SelectControllerP2 : MonoBehaviour {
         transform.position = grid.GetWorldPosition(tankP2.x, tankP2.y);
         x = tankP2.x;
         y = tankP2.y;
+        Text.unitP2.text = "Tank ";
     }
 
     public void ContHealerP2()
@@ -49,6 +52,7 @@ public class SelectControllerP2 : MonoBehaviour {
         transform.position = grid.GetWorldPosition(healerP2.x, healerP2.y);
         x = healerP2.x;
         y = healerP2.y;
+        Text.unitP2.text = "healer ";
     }
 
     public void AddContP2()
