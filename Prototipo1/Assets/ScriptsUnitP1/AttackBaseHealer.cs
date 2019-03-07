@@ -87,8 +87,8 @@ public class AttackBaseHealer : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.D) && RangeHzTank <= 5 && healerP1.y == tankP2.y && isAttackHealer == true)
         {
             
-                if (tankP2.x < healerP2.x && tankP2.x < tankP1.x && tankP2.x < healerP1.x)
-                {
+               // if (tankP2.x < healerP2.x && tankP2.x < tankP1.x && tankP2.x < healerP1.x)
+               // {
                     lm.lifeTankPlayer2 -= att;
                     isAttackHealer = false;
                     turn.isTurn = false;
@@ -97,112 +97,112 @@ public class AttackBaseHealer : MonoBehaviour{
                     selection.isActiveHealer = false;
                     lifeHitTankP2 = lm.lifeTankPlayer2;
                 
-                }
+                //}
         }
         // healer
         if (Input.GetKeyDown(KeyCode.D) && RangeHzHealer <= 5 && healerP1.y == healerP2.y  && isAttackHealer == true)
         {
-            if (healerP2.x < healerP1.x && healerP2.x < tankP2.x && healerP2.x < tankP1.x)
-            {
-                lm.lifeHealerPlayer2 -= att;
+            //if (healerP2.x < healerP1.x && healerP2.x < tankP2.x && healerP2.x < tankP1.x)
+            //{
+            lm.lifeHealerPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitHealer = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitHealerP2 = lm.lifeHealerPlayer2;
-            }
+            // }
         }
 
         //tank
         if (Input.GetKeyDown(KeyCode.A) && RangeHzTank >= -5 &&  healerP1.y == tankP2.y && isAttackHealer == true)
         {
-            if (RangeHzTank < RangeHzHealer)
-            {
-                lm.lifeTankPlayer2 -= att;
+            //if (RangeHzTank < RangeHzHealer)
+            //{
+            lm.lifeTankPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitTank = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitTankP2 = lm.lifeTankPlayer2;
-            }
+            // }
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer >= -5 && healerP1.y == healerP2.y && isAttackHealer == true)
         {
-            if (RangeHzHealer < RangeHzTank)
-            {
-                lm.lifeHealerPlayer2 -= att;
+            //if (RangeHzHealer < RangeHzTank)
+            //{
+            lm.lifeHealerPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitHealer = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitHealerP2 = lm.lifeHealerPlayer2;
-            }
+            //}
         }
 
         //tank
         if (Input.GetKeyDown(KeyCode.W) && RangeVtTank <= 5 && healerP1.y == tankP2.y && isAttackHealer == true)
         {
-            if (RangeVtTank > RangeVtHealer)
-            {
-                lm.lifeTankPlayer2 -= att;
+            //if (RangeVtTank > RangeVtHealer)
+            // {
+            lm.lifeTankPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitTank = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitTankP2 = lm.lifeTankPlayer2;
-            }
+            // }
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer <= 5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer <= 5 && healerP1.y == healerP2.y && isAttackHealer == true)
         {
-            if (RangeVtHealer > RangeVtTank)
-            {
-                lm.lifeHealerPlayer2 -= att;
+            // if (RangeVtHealer > RangeVtTank)
+            // {
+            lm.lifeHealerPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitHealer = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitHealerP2 = lm.lifeHealerPlayer2;
-            }
+            // }
         }
         // tank
         if (Input.GetKeyDown(KeyCode.S) && RangeVtTank >= -5 && healerP1.y == tankP2.y && isAttackHealer == true)
         {
-            if (RangeVtTank < RangeVtHealer)
-            {
-                lm.lifeTankPlayer2 -= att;
+            // if (RangeVtTank < RangeVtHealer)
+            // {
+            lm.lifeTankPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitTank = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitTankP2 = lm.lifeTankPlayer2;
-             
-            }
+
+            //}
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer >= -5 && healerP1.y == healerP2.y && isAttackHealer == true)
         {
-            if (RangeVtHealer < RangeVtTank)
-            {
-                lm.lifeHealerPlayer2 -= att;
+            // if (RangeVtHealer < RangeVtTank)
+            // {
+            lm.lifeHealerPlayer2 -= att;
                 isAttackHealer = false;
                 turn.isTurn = false;
                 isHitHealer = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selection.isActiveHealer = false;
                 lifeHitHealerP2 = lm.lifeHealerPlayer2;
-             
-            }
+
+            // }
         }
     }
 

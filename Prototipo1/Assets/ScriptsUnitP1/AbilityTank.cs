@@ -69,7 +69,7 @@ public class AbilityTank : MonoBehaviour {
     {
         SetRange();
         //destra TankP2
-        if (Input.GetKeyDown(KeyCode.D) && rangeHzTank >= -2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.D) && rangeHzTank >= -2 && tank.y == tankP2.y && isAbility == true)
         {
             if (rangeHzTank > rangeHzHealer)
             {
@@ -86,7 +86,7 @@ public class AbilityTank : MonoBehaviour {
             }
         }
         // destra HealerP2
-        if (Input.GetKeyDown(KeyCode.D) && rangeHzHealer >= -2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.D) && rangeHzHealer >= -2 && tank.y == healerP2.y && isAbility == true)
         {
             if (rangeHzHealer > rangeHzTank)
             {
@@ -103,7 +103,7 @@ public class AbilityTank : MonoBehaviour {
             }
         }
         //sinistra tank
-        if (Input.GetKeyDown(KeyCode.A) && rangeHzTank <= 2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.A) && rangeHzTank <= 2 && tank.y == tankP2.y && isAbility == true)
         {
             if (rangeHzTank < rangeHzHealer)
             {
@@ -120,7 +120,7 @@ public class AbilityTank : MonoBehaviour {
             }
         }
         // sinistra healer
-        if (Input.GetKeyDown(KeyCode.A) && rangeHzHealer <= 2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.A) && rangeHzHealer <= 2 && tank.y == healerP2.y && isAbility == true)
         {
             if (rangeHzHealer < rangeHzTank)
             {
@@ -137,7 +137,7 @@ public class AbilityTank : MonoBehaviour {
             }
         }
         //sopra tank
-        if (Input.GetKeyDown(KeyCode.W) && rangeVtTank >= -2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.W) && rangeVtTank >= -2 && tank.y == tankP2.y && isAbility == true)
         {
             if (rangeVtTank > rangeVtHealer)
             {
@@ -156,7 +156,7 @@ public class AbilityTank : MonoBehaviour {
 
         //sopra healer
 
-        if (Input.GetKeyDown(KeyCode.W) && rangeVtHealer >= -2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.W) && rangeVtHealer >= -2 && tank.y == healerP2.y && isAbility == true)
         {
             if (rangeVtHealer > rangeVtTank)
             {
@@ -175,7 +175,7 @@ public class AbilityTank : MonoBehaviour {
 
        
          // sotto tank
-        if (Input.GetKeyDown(KeyCode.S) && rangeVtTank <= 2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.S) && rangeVtTank <= 2 && tank.y == tankP2.y && isAbility == true)
         {
             if (rangeVtTank < rangeVtHealer)
             {
@@ -193,7 +193,7 @@ public class AbilityTank : MonoBehaviour {
         }
 
         //sotto healer
-        if (Input.GetKeyDown(KeyCode.S) && rangeVtHealer <= 2 && isAbility == true)
+        if (Input.GetKeyDown(KeyCode.S) && rangeVtHealer <= 2 && tank.y == healerP2.y && isAbility == true)
         {
             if (rangeVtHealer < rangeVtTank)
             {

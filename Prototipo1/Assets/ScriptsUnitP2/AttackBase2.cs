@@ -69,7 +69,7 @@ public class AttackBase2 : MonoBehaviour {
     {
         SetRange();
         //tank destra
-        if (Input.GetKeyDown(KeyCode.D) && RangeHzTank == -1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.D) && RangeHzTank == -1 && tankP2.y == tank.y && isAttack == true)
         {
             lm.lifeTank -= att;
             isAttack = false;
@@ -78,7 +78,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         // healer destra
-        if (Input.GetKeyDown(KeyCode.D) && RangeHzHealer == -1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.D) && RangeHzHealer == -1 && tankP2.y == healerP1.y && isAttack == true)
         {
             lm.lifeHealer -= att;
             isAttack = false;
@@ -87,7 +87,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         //tanke sinistra
-        if (Input.GetKeyDown(KeyCode.A) && RangeHzTank == 1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.A) && RangeHzTank == 1 && tankP2.y == tank.y && isAttack == true)
         {
             lm.lifeTank -= att;
             isAttack = false;
@@ -96,7 +96,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         //healer sinistra
-        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer == 1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer == 1 && tankP2.y == healerP1.y && isAttack == true)
         {
             lm.lifeHealer -= att;
             isAttack = false;
@@ -105,7 +105,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         //tank sopra
-        if (Input.GetKeyDown(KeyCode.W) && RangeVtTank == -1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.W) && RangeVtTank == -1 && tankP2.y == tank.y && isAttack == true)
         {
             lm.lifeTank -= att;
             isAttack = false;
@@ -114,7 +114,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         //healer sopra
-        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer == -1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer == -1 && tankP2.y == healerP1.y && isAttack == true)
         {
             lm.lifeHealer -= att;
             isAttack = false;
@@ -123,7 +123,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         //tank sotto
-        if (Input.GetKeyDown(KeyCode.S) && RangeVtTank == 1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.S) && RangeVtTank == 1 && tankP2.y == tank.y && isAttack == true)
         {
             lm.lifeTank -= att;
             isAttack = false;
@@ -132,7 +132,7 @@ public class AttackBase2 : MonoBehaviour {
             selectionP2.isActiveTankP2 = false;
         }
         // healer sotto
-        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer == -1 && isAttack == true)
+        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer == -1 && tankP2.y == healerP1.y && isAttack == true)
         {
             lm.lifeHealer -= att;
             isAttack = false;

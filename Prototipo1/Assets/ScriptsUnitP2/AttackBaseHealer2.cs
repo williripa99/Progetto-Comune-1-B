@@ -82,121 +82,121 @@ public class AttackBaseHealer2 : MonoBehaviour {
     {
         SetRange();
         // tank
-        if (Input.GetKeyDown(KeyCode.D) && RangeHzTank <= 5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.D) && RangeHzTank <= 5 && healerP2.y == tankP1.y && isAttackHealer == true)
         {
-            if (RangeHzTank < RangeHzHealer)
-            {
-                lm.lifeTank -= att;
+            // if (RangeHzTank < RangeHzHealer)
+            //{
+            lm.lifeTank -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeTank;
-            }
+            // }
         }
         // healer
-        if (Input.GetKeyDown(KeyCode.D) && RangeHzHealer <= 5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.D) && RangeHzHealer <= 5 && healerP2.y == healerP1.y && isAttackHealer == true)
         {
-            if (RangeHzHealer < RangeHzTank)
-            {
-                lm.lifeHealer -= att;
+            //if (RangeHzHealer < RangeHzTank)
+            //{
+            lm.lifeHealer -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeHealer;
-            }
+            //}
         }
 
         //tank
-        if (Input.GetKeyDown(KeyCode.A) && RangeHzTank >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.A) && RangeHzTank >= -5 && healerP2.y == tankP1.y && isAttackHealer == true)
         {
-            if (RangeHzTank > RangeHzHealer)
-            {
-                lm.lifeTank -= att;
+            //if (RangeHzTank > RangeHzHealer)
+            //{
+            lm.lifeTank -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeTank;
-            }
+            //}
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.A) && RangeHzHealer >= -5 && healerP2.y == healerP1.y && isAttackHealer == true)
         {
-            if (RangeHzHealer > RangeHzTank)
-            {
-                lm.lifeHealer -= att;
+            //if (RangeHzHealer > RangeHzTank)
+            //{
+            lm.lifeHealer -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 gameObject.GetComponent<InputController>().enabled = true;
                 selectionP2.isActiveHealerP2 = false;
                 lifeHit = lm.lifeHealer;
-            }
+            //}
         }
 
         //tank
-        if (Input.GetKeyDown(KeyCode.W) && RangeVtTank <= 5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.W) && RangeVtTank <= 5 && healerP2.y == tankP1.y && isAttackHealer == true)
         {
-            if (RangeVtTank < RangeVtHealer)
-            {
-                lm.lifeTank -= att;
+            //if (RangeVtTank < RangeVtHealer)
+            //{
+            lm.lifeTank -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeTank;
-            }
+            // }
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer <= 5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.W) && RangeVtHealer <= 5 && healerP2.y == healerP1.y && isAttackHealer == true)
         {
-            if (RangeVtHealer < RangeVtTank)
-            {
-                lm.lifeHealer -= att;
+            //if (RangeVtHealer < RangeVtTank)
+            //{
+            lm.lifeHealer -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeHealer;
-            }
+            //}
         }
         // tank
-        if (Input.GetKeyDown(KeyCode.S) && RangeVtTank >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.S) && RangeVtTank >= -5 && healerP2.y == tankP1.y && isAttackHealer == true)
         {
-            if (RangeVtTank > RangeVtHealer)
-            {
-                lm.lifeTank -= att;
+            //if (RangeVtTank > RangeVtHealer)
+            //{
+            lm.lifeTank -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeTank;
-            }
+            // }
         }
 
         //healer
-        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer >= -5 && isAttackHealer == true)
+        if (Input.GetKeyDown(KeyCode.S) && RangeVtHealer >= -5 && healerP2.y == healerP1.y && isAttackHealer == true)
         {
-            if (RangeVtHealer > RangeVtTank)
-            {
-                lm.lifeHealer -= att;
+            //if (RangeVtHealer > RangeVtTank)
+            //{
+            lm.lifeHealer -= att;
                 isAttackHealer = false;
                 turn.isTurn = true;
                 isHit = true;
                 selectionP2.isActiveHealerP2 = false;
                 gameObject.GetComponent<InputController>().enabled = true;
                 lifeHit = lm.lifeHealer;
-            }
+            //}
         }
     }
 
