@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GridSystem;
+using DG.Tweening;
 
 //tank giocatore 2
 public class PositionTester2 : MonoBehaviour {
-
+    public float duration = 0.5f;
     public int x, y;
     public BaseGrid grid;
     public TurnManager turn;
@@ -31,9 +32,9 @@ public class PositionTester2 : MonoBehaviour {
     {
         if (x > 0 && turn.isTurn == false && contMp < 2 && selectionP2.isActiveTankP2 == true)
         {
-            x--;
-            transform.position = grid.GetWorldPosition(x, y);
-            //turn.isTurn = false;
+            transform.DOLocalRotate(new Vector3(0, 0, 0), 0.2f);
+            transform.position = grid.GetWorldPosition(x--, y);
+            transform.DOMoveX(x, duration).SetAutoKill(false);
             turn.ContRound += 1;
             maxRangeHzTankPlayer2 = x;
             contMp++;
@@ -45,9 +46,9 @@ public class PositionTester2 : MonoBehaviour {
     {
         if (x < 11 && turn.isTurn == false && contMp < 2 && selectionP2.isActiveTankP2 == true)
         {
-            x++;
-            transform.position = grid.GetWorldPosition(x, y);
-            //turn.isTurn = false;
+            transform.DOLocalRotate(new Vector3(0, 180, 0), 0.2f);
+            transform.position = grid.GetWorldPosition(x++, y);
+            transform.DOMoveX(x, duration).SetAutoKill(false);
             turn.ContRound += 1;
             maxRangeHzTankPlayer2 = x;
             contMp++;
@@ -58,9 +59,9 @@ public class PositionTester2 : MonoBehaviour {
     {
         if (y > 0 && turn.isTurn == false && contMp < 2 && selectionP2.isActiveTankP2 == true)
         {
-            y--;
-            transform.position = grid.GetWorldPosition(x, y);
-            //turn.isTurn = false;
+            transform.DOLocalRotate(new Vector3(0, -90, 0), 0.2f);
+            transform.position = grid.GetWorldPosition(x, y--);
+            transform.DOMoveZ(y, duration).SetAutoKill(false); ;
             turn.ContRound += 1;
             maxRangeVtTankPlayer2 = y;
             contMp++;
@@ -71,9 +72,9 @@ public class PositionTester2 : MonoBehaviour {
     {
         if (y < 11 && turn.isTurn == false && contMp < 2 && selectionP2.isActiveTankP2 == true)
         {
-            y++;
-            transform.position = grid.GetWorldPosition(x, y);
-            //turn.isTurn = false;
+            transform.DOLocalRotate(new Vector3(0,90, 0), 0.2f);
+            transform.position = grid.GetWorldPosition(x, y++);
+            transform.DOMoveZ(y, duration).SetAutoKill(false); ;
             turn.ContRound += 1;
             maxRangeVtTankPlayer2 = y;
             contMp++;

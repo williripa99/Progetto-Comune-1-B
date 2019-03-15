@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DimX: 12
   DimY: 12
-  CellDim: 2
+  CellDim: 1

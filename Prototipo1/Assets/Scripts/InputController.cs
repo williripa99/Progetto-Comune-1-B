@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GridSystem;
+using DG.Tweening;
 
 public class InputController : MonoBehaviour {
     public KeyCode UpButton;
@@ -9,11 +10,13 @@ public class InputController : MonoBehaviour {
     public KeyCode LeftButton;
     public KeyCode RightButton;
     public KeyCode PassButton;
-   
+
+
 
     void Start()
     {
-       
+  
+
     }
 
     // Update is called once per frame
@@ -23,13 +26,14 @@ public class InputController : MonoBehaviour {
         {
             ///left
             SendMessage("GoToLeft");
-            
+      
         }
 
         if (Input.GetKeyDown(RightButton))
         {
             ///right
             SendMessage("GoToRight");
+
            
         }
 
@@ -37,14 +41,15 @@ public class InputController : MonoBehaviour {
         {
             ///up
             SendMessage("GoToUp");
-           
+      
+
         }
 
         if (Input.GetKeyDown(DownButton))
         {
             ///down
             SendMessage("GoToDown");
-          
+           
         }
 
         if (Input.GetKeyDown(PassButton))

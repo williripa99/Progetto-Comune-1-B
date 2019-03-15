@@ -24,7 +24,7 @@ public class SelectionController : MonoBehaviour {
         contSelectionP1 = 0;
         transform.position = grid.GetWorldPosition(x,y);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
-        
+
 
     }
 
@@ -35,13 +35,14 @@ public class SelectionController : MonoBehaviour {
         if(turn.isTurn == false)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
+
         }
     }
 
     public void ContTankP1()
     {
        
-        transform.position = grid.GetWorldPosition(tankP1.x, tankP1.y);
+        transform.position = grid.GetWorldPosition(tankP1.x , tankP1.y);
         x = tankP1.x;
         y = tankP1.y;
         Text.unitP1.text = "Tank ";
